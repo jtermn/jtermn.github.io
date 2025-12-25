@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Prueba JS en Móvil</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        button:active {
+            background-color: #0056b3;
+            transform: scale(0.95);
+        }
+        #contador {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Funciona! 🚀</h1>
+        <p>Has tocado el botón:</p>
+        <div id="contador">0</div>
+        <button id="miBoton">¡Haz clic aquí!</button>
+    </div>
+
+    <script>
+        // Lógica simple de JavaScript
+        let cuenta = 0;
+        const boton = document.getElementById('miBoton');
+        const display = document.getElementById('contador');
+
+        boton.addEventListener('click', () => {
+            cuenta++;
+            display.textContent = cuenta;
+            
+            // Un pequeño efecto extra: cambiar color cada 10 clics
+            if(cuenta % 10 === 0) {
+                display.style.color = 'red';
+            } else {
+                display.style.color = '#333';
+            }
+        });
+    </script>
+</body>
+</html>
