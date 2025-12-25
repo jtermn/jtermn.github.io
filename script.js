@@ -12,7 +12,7 @@ boton.addEventListener('click', () => {
     
     // Cambiar color cada 10 clics
     if (cuenta % 10 === 0) {
-        display.style.color = '#e74c3c'; // Rojo
+        display.style.color = '#e5e91fff'; // Rojo
     } else {
         display.style.color = '#333';
     }
